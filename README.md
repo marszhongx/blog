@@ -15,12 +15,12 @@
 
 Use Gitpod, a free online dev environment for GitHub.
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/zomixi/blog.git)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/marszhongx/blog.git)
 
 Or clone locally:
 
 ```bash
-git clone https://github.com/zomixi/blog.git
+git clone https://github.com/marszhongx/blog.git
 cd blog
 yarn install
 yarn dev
@@ -29,7 +29,7 @@ yarn dev
 > Need local Environment variable, an example `.env.local`:
 
 ```bash
-VERCEL_GIT_REPO_OWNER=zomixi
+VERCEL_GIT_REPO_OWNER=marszhongx
 VERCEL_GIT_REPO_SLUG=blog
 ```
 

@@ -2,20 +2,17 @@ import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import Layout from "../components/layout";
-import { OWNER } from "../config";
+import { SITE_NAME } from "../config";
 import { getRepositoryIssues } from "../lib/github";
 import { PostType } from "../types";
 
-const Home: NextPage<{ posts: PostType[]; owner: string }> = ({
-  posts = [],
-  owner = "",
-}) => {
+const Home: NextPage<{ posts: PostType[] }> = ({ posts = [] }) => {
   return (
     <Layout>
       <Head>
-        <title>{`${owner}'s blog`}</title>
-        <meta name="description" content={`A blog site belong to ${owner}`} />
-        <meta name="Keywords" content={[owner, "blog"].join(",")} />
+        <title>{`${SITE_NAME}'s blog`}</title>
+        <meta name="description" content={`A blog site belong to ${SITE_NAME}`} />
+        <meta name="Keywords" content={[SITE_NAME, "blog"].join(",")} />
       </Head>
 
       <article className="markdown-body">
@@ -27,7 +24,7 @@ const Home: NextPage<{ posts: PostType[]; owner: string }> = ({
             marginBottom: 48,
           }}
         >
-          {`${owner}'s blog`}
+          {`${SITE_NAME}'s blog`}
         </div>
 
         <ul>
@@ -63,7 +60,6 @@ export const getStaticProps: GetStaticProps = async () => {
   return {
     props: {
       posts,
-      owner: OWNER,
     },
   };
 };
